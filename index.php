@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-		ini_set('display_errors', '1');
+ini_set('display_errors', '1');
 
 /* 
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -34,12 +34,5 @@ error_reporting(E_ALL);
 global $octopus;
 $octopus_load_start=microtime(true); 
 
-define( 'webdir', __DIR__ );
-define( 'coredir', webdir . '/core' );
-
-define( 'domains_path', '/domains');
-
-define( 'site_path', domains_path . '/default');
-define( 'sitedir', webdir . site_path );
-
+include('core/constants.php');
 include('core/init.php');

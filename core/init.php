@@ -1,4 +1,6 @@
 <?php
+/* Run installation scripts */
+require_once('install/install.php');
 
 /* Include Composer autoload.php */
 require_once( 'vendor/autoload.php' );

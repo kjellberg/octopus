@@ -14,8 +14,6 @@ class Octopus
 
 	function __construct() {
 
-		$this->checkInstall();
-
 		$db_config = $this->config('db');
 
 		$this->db = new Capsule;
@@ -77,12 +75,5 @@ class Octopus
 	{
 		die("<h1>" . $message . "</h1><hr>");
 	}
-
-	public function checkInstall() {
-		if (file_exists(sitedir.'/')) {
-			$this->echo_and_die("missing config files.");
-		}
-	}
-
 }
 $octopus = new Octopus;

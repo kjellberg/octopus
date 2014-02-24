@@ -4,7 +4,8 @@ class template extends Octopus
 	var $css = array();
 
 	function __construct() {
-		$this->theme_dir  = webdir . '/domains/global/themes/empty';
+		$this->theme_path = '/domains/global/themes/empty';
+		$this->theme_dir  = webdir . $this->theme_path;
 		$this->theme_file = $this->theme_dir . '/' . $this->route()->theme_file;
 	}
 
@@ -34,7 +35,7 @@ class template extends Octopus
 	public function embed($file, $args = array()) {
 
 		$ext = substr(strrchr($file,'.'),1);
-		$theme_url = $this->config('site')['theme_url'];
+		$theme_url = $this->config('site')['site_url'] . $this->theme_path;
 
 		switch ($ext) {
 			case 'css':
