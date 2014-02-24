@@ -2,6 +2,5 @@
     "require": {
         "monolog/monolog": "1.2.*",
 		"illuminate/database": "*"
-		"illuminate/schema": "*"
     }
 }
