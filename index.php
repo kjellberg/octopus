@@ -1,6 +1,4 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+<?php $octopus_load_start=microtime(true); 
 
 /* 
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -32,7 +30,9 @@ ini_set('display_errors', '1');
 */ 
 
 global $octopus;
-$octopus_load_start=microtime(true); 
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 
 include('core/constants.php');
 include('core/init.php');
