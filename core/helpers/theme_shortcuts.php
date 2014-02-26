@@ -28,3 +28,10 @@ function theme_url() {
 	global $octopus;
 	return $octopus->config->get('site')['theme_url'];
 }
+
+function editable ( $field_name, $placeholder = 'Editable text', $tag = 'span', $args = array() ) 
+{
+	global $octopus;
+	extract($args);
+	return "<{$tag} class='editable'>{$placeholder}</{$tag}>";
+}

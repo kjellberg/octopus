@@ -16,6 +16,9 @@ require_once( coredir . '/octopus.php');
 $helpers_dir = coredir . '/helpers';
 foreach (glob("{$helpers_dir}/*.php") as $filename ) include_once $filename;
 
+/* Load admin functions if admin */
+require_once( coredir . '/admin/load.php');
+
 /* Include and render our views */
 require_once( coredir . '/view.php');
 
