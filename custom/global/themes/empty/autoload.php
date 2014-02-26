@@ -1,4 +1,5 @@
 <?php
+
 /* 
  * Function: insert_head();
  * Everything in here will be loaded into <head></head>-section.

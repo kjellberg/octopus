@@ -27,10 +27,12 @@ class Octopus
 			$this->hook->on('after_footer', 'show_debug_footer');
 			
 		}
+
 	}
 
 	public function auto_class_loader( $path )
 	{
+
 		/* Load classes and create an object from all files in a specifed directory */
 		if (!is_dir($path))
 			return false; // Return false if the folder doesn't exists.
@@ -45,11 +47,12 @@ class Octopus
 	    	$classname = end($classname);
 
 	    	if (class_exists($classname))
-	       		$this->$classname = new $classname;
+	       		$this->$classname = new $classname; 
 	    }
 	}
 
 	public function query() {
+
 		if (isset($_GET['q']))
 			return $_GET['q'];
 		else 
@@ -59,7 +62,7 @@ class Octopus
 	public function config($config_file) {
 
 		$config[] = sitedir . '/configs/'.$config_file. '.php';
-		$config[] = webdir . '/domains/global/configs/'.$config_file. '.php';
+		$config[] = custom_path . 'global/configs/'.$config_file. '.php';
 		$config[] = coredir . '/includes/configs/'.$config_file. '.php';
 
 		foreach($config as $file) 

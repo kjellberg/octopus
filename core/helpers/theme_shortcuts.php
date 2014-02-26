@@ -24,11 +24,6 @@ function theme_directory() {
 	return $octopus->template->theme_dir;
 }
 
-function theme_url() {
-	global $octopus;
-	return $octopus->config->get('site')['theme_url'];
-}
-
 function editable ( $field_name, $placeholder = 'Editable text', $tag = 'span', $args = array() ) 
 {
 	global $octopus;

@@ -1,6 +1,6 @@
 <?php
 /* Run installation scripts */
-require_once('install/install.php');
+//require_once('install/install.php');
 
 /* Include Composer autoload.php */
 require_once( 'vendor/autoload.php' );
@@ -21,4 +21,3 @@ require_once( coredir . '/admin/load.php');
 
 /* Include and render our views */
 require_once( coredir . '/view.php');
-

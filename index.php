@@ -33,6 +33,6 @@ global $octopus;
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-
 include('core/constants.php');
+
 include('core/init.php');
