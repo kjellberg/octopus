@@ -2,7 +2,7 @@
 global $system_errors;
 $system_errors = array();
 
-define('installdir', webdir.'/core/install');
+define('installdir', coredir .'/install');
 
 if (isset($octopus_load_start)) 
 	define('octopus_loaded', true);
