@@ -4,9 +4,6 @@ $system_errors = array();
 
 define('installdir', coredir .'/install');
 
-if (isset($octopus_load_start)) 
-	define('octopus_loaded', true);
-
 /* Check system requirements */
 include(installdir.'/check_system_requirements.php');
 
@@ -32,9 +29,9 @@ if (isset($_POST['admin'])) {
 /* Check if db configuration file exists */
 if (file_exists(sitedir.'/configs/db.php')) 
 	$database = 'mysql';
-else {
+else 
 	$database = 'none';
-}
+
 
 /* Check if site configuration file exists */
 if (file_exists(sitedir.'/configs/site.php')) 

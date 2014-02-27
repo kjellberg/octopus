@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?=get_head();?>
+	<?php echo $head; ?>
 </head>
 <body>
-	<div id="full" style="background: #f39c12;height: 100%;">
+	<div id="full">
 		<div class="middle">
-			<?php echo editable('welcome_message', 'HI', 'h1'); ?>
+			<?php echo editable('welcome_message', 'Welcome', 'h1'); ?>
 		</div>
 	</div>
-	<?=get_footer();?>
+	<?php echo $footer; ?>
 </body>
 </html>

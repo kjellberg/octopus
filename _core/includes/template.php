@@ -25,13 +25,16 @@ class template extends Octopus
 	<?php
 		$octopus->hook->trigger('after_head');
 		$head = ob_get_clean();
-		echo $head;
+		return $head;
 	}
 
 	public function footer() {
 		global $octopus;
+		ob_start();
 		$octopus->hook->trigger('before_footer');
 		$octopus->hook->trigger('after_footer');
+		$footer = ob_get_clean();
+		return $footer;
 	}
 
 	public function embed($file, $args = array()) {
@@ -52,7 +55,9 @@ class template extends Octopus
 
 	public function render($template_file = '', $args = array()) {
 
-		extract($args);
+		$head = $this->head();
+		$footer = $this->footer();
+		extract($args, EXTR_OVERWRITE);
 
 		if(file_exists($template_file)) 
 		{
