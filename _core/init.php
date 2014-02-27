@@ -1,9 +1,11 @@
 <?php
-/* Run installation scripts */
-//require_once('install/install.php');
+define( 'octopus_version', '1.0.0');
+define( 'octopus_version_name', 'dev');
 
-/* Include constants */
-include( coredir . '/constants.php');
+define( 'sitedir', customdir . '/default' );
+
+/* Run installation scripts */
+require_once('install/install.php');
 
 /* Include Composer autoload.php */
 require_once( 'vendor/autoload.php' );

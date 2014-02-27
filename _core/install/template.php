@@ -7,7 +7,7 @@
 
     <title>Octopus CMS - Installation</title>
   	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-  	<link rel="stylesheet" href="core/install/install.css">
+  	<link rel="stylesheet" href="_core/install/install.css">
    	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -55,7 +55,7 @@
               <ul class="nav masthead-nav">
                 <li><a href="#top">System requirements <?php if(count($system_errors) == 0): ?><img class="checked" src="https://cdn2.iconfinder.com/data/icons/bwpx/icons/symbol_check.gif" alt=""><?php endif; ?></a></li>
                 <li><a href="#database">Database <?php if($database != "none"): ?><img class="checked" src="https://cdn2.iconfinder.com/data/icons/bwpx/icons/symbol_check.gif" alt=""><?php endif; ?></a></li>
-                <li><a href="#site_setup">Site setup</a></li>
+                <li><a href="#site_setup">Site setup <?php if($site == "ready"): ?><img class="checked" src="https://cdn2.iconfinder.com/data/icons/bwpx/icons/symbol_check.gif" alt=""><?php endif; ?></a></a></li>
               </ul>
             </div>
           </div>
@@ -162,9 +162,7 @@ if (count($system_errors) > 0 )
 
     <div class="box">
 
-      <?php if (isset($db_status)): ?>
-        <pre><?php echo $db_status; ?></pre>
-      <?php endif; ?>
+      <?php if ($site == 'install'): ?>
       <form role="form" method="post">
 
         <div class="form-group">
@@ -174,6 +172,12 @@ if (count($system_errors) > 0 )
 
         <button name="admin" value="site" type="submit" class="btn btn-default">Finish installation</button>
       </form>
+
+    <?php else: ?>
+      <h1>Your site is ready..</h1>
+      <p>What are you waiting for? Go over to the database section and connect to your database. Then you'll be up and running!
+    <?php endif; ?>
+
     </div>
   </div>
 

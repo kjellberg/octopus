@@ -12,4 +12,4 @@ $mysqli->query("CREATE TABLE default_routes (
 
 
 $mysqli->query("INSERT INTO default_routes (ID, query_uri, theme_file, seo_title, page_keywords, page_description, page_language) VALUES
-(1, '/', 'index.php', 'Octopus CMS', 'Lorem, ipsum, dolor', 'Lorem ipsum dolor sit amet.', '');");
+(1, '/', 'index.php', 'Octopus CMS', 'Lorem, ipsum, dolor', 'Lorem ipsum dolor sit amet.', 'en');");

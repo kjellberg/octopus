@@ -34,6 +34,8 @@ global $octopus;
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-define( 'coredir', __DIR__ . '/.core');
+define( 'webdir', dirname(__FILE__) );
+define( 'coredir', __DIR__ . '/_core');
+define( 'customdir', webdir . '/custom');
 
 include(coredir . '/init.php');

@@ -6,7 +6,7 @@ class template extends Octopus
 	function __construct() {
 		$this->theme 			= 'global/themes/empty';
 		$this->theme_path 		= $this->theme;
-		$this->theme_dir  		= custom_path . '/' . $this->theme_path;
+		$this->theme_dir  		= customdir . '/' . $this->theme_path;
 		$this->theme_file 		= $this->theme_dir . '/' . $this->route()->theme_file;
 		$this->theme_url	  	= $this->config('site')['site_url'] . 'custom/' . $this->theme_path;
 	}

@@ -62,7 +62,7 @@ class Octopus
 	public function config($config_file) {
 		
 		$config[] = sitedir . '/configs/'.$config_file. '.php';
-		$config[] = custom_path . 'global/configs/'.$config_file. '.php';
+		$config[] = customdir . 'global/configs/'.$config_file. '.php';
 		$config[] = coredir . '/includes/configs/'.$config_file. '.php';
 
 		foreach($config as $file) 
