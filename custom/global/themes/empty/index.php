@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $head; ?>
+	<?php echo $this->head(); ?>
 </head>
 <body>
 	<div id="full">
@@ -9,6 +9,6 @@
 			<?php echo editable('welcome_message', 'Welcome', 'h1'); ?>
 		</div>
 	</div>
-	<?php echo $footer; ?>
+	<?php echo $this->footer(); ?>
 </body>
 </html>
