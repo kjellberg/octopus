@@ -24,9 +24,3 @@ function theme_directory() {
 	return $octopus->template->theme_dir;
 }
 
-function editable ( $field_name, $placeholder = 'Editable text', $tag = 'span', $args = array() ) 
-{
-	global $octopus;
-	extract($args);
-	return "<{$tag} class='editable'>{$placeholder}</{$tag}>";
-}

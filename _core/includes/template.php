@@ -80,6 +80,13 @@ class template extends Octopus
 		else 
 			$this->echo_and_die('404 - Sidan kan inte hittas');
 	}
+
+	function field ( $field_name, $placeholder = 'Editable text', $tag = 'span', $args = array() ) 
+	{
+		global $octopus;
+		extract($args);
+		return "<{$tag} class='editable'>{$placeholder}</{$tag}>";
+	}
 }
 
 
