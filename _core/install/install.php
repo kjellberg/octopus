@@ -7,7 +7,6 @@ define('installdir', coredir .'/install');
 /* Check system requirements */
 include(installdir.'/check_system_requirements.php');
 
-
 if (isset($_POST['admin'])) {
 
 	switch ($_POST['admin']) {
@@ -39,6 +38,11 @@ if (file_exists(sitedir.'/configs/site.php'))
 else 
 	$site = 'install';
 
+
+if (count($system_errors) > 0) {
+	include('template.php');
+	die();
+}
 
 if ($database == 'none') {
 	include('template.php');
