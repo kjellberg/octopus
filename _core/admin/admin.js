@@ -41,39 +41,23 @@ $(function() {
     $(selector).click(function(e) {
         e.stopPropagation();
     });
-    
-    // initialize the "save" function
-    $(selector).focus(function(e) {
-        content_holder = $(this);
-        content        = content_holder.html();
 
-        oldcolor = content_holder.css('color');
-        content_holder.css('color', 'red');
-
-        // one click outside the editable area saves the content
-        $('body').one('click', function(e) {
-            // but not if the content didn't change
-            if ($(e.target).is(selector) || content == content_holder.html()) {
-                return;
+    $(selector).blur(function(){
+        var currentField = $(this);
+        $.ajax({
+            url: window.octopusAdminUrl + '/rpc.php',
+            type: 'POST',
+            dataType: 'json',
+            data: { 
+                content: $(this).html(),
+                nameId: $(this).attr('id') 
+            },
+            success: function( data ) {
+                currentField.fadeOut().fadeIn();
+            },
+            error: function( data ) {
+                console.log(data);
             }
-            
-            $.ajax({
-                url: window.octopusAdminUrl + '/rpc.php',
-                type: 'POST',
-                dataType: 'json',
-                data: { 
-                    content: content_holder.html(),
-                    nameId: content_holder.attr('id') 
-                },
-                success: function(json) {
-                    content_holder.fadeTo('slow', 0.5).fadeTo('slow', 1);
-                    content_holder.css('color', oldcolor);
-                    console.log(json);
-                },
-                error: function( data ) {
-                    console.log(data.responseText);
-                }
-            });
-        });
+        }); 
     });
 });
