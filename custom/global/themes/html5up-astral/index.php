@@ -39,12 +39,12 @@
 						<!-- Work --> 
 							<article id="work" class="panel">
 								<header>
-									<h2>Work</h2>
+									<?php echo $html->h2('second-page-title', 'My Portfolio'); ?>
 								</header>
 								<p>
-									Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit. 
+									<?php echo $html->p('second-page-paragraph', 'Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit. 
 									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
-									luctus elit eget interdum.
+									luctus elit eget interdum.'); ?> 
 								</p>
 								<section class="is-gallery">
 									<div class="row half">
