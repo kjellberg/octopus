@@ -13,6 +13,6 @@ if (!file_exists(webdir.'/vendor/autoload.php')) {
 
 if (!is_writeable(sitedir . '/configs')) {
 	array_push($system_errors, 
-		array('Your configs directory needs to be writeable.', array('$ chmod -R 755 ' . sitedir . '/configs'))
+		array('Your configs directory needs to be writeable.', array('$ chmod -R 777 ' . sitedir . '/configs'))
 	);
 }

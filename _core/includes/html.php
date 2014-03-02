@@ -1,5 +1,5 @@
 <?php
-class content
+class html
 {
 	function tag ( $field_name, $placeholder = 'Editable text', $tag = 'span', $args = array() ) 
 	{
@@ -7,7 +7,7 @@ class content
 		$class = '';
 		extract($args, EXTR_OVERWRITE);
 
-		if(!empty(ContentDB::where('nameId', '=', $field_name )->first()))
+		if(!empty(ContentDB::where('nameId', '=', $field_name )->first()->content))
 			$placeholder = ContentDB::where('nameId', '=', $field_name )->first()->content;
 
 		return "<{$tag} id='{$field_name}' class='editable {$class}'>{$placeholder}</{$tag}>";

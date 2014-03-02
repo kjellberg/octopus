@@ -17,7 +17,7 @@ function keydown(event) {
         }
         if (code == 9) {//Write some logic
             e.preventDefault();
-        	$("#octopus-admin-frame").toggle();
+        	$("#octopus-admin-frame").fadeToggle();
         }
 }
 

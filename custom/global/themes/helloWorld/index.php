@@ -7,7 +7,7 @@
 	<div id="full">
 		<div class="middle">
 			<?php 
-				echo $content->h1( 'front-page-message' );
+				echo $html->h1( 'front-page-message' );
 			?>
 		</div>
 	</div>

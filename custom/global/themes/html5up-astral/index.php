@@ -27,8 +27,8 @@
 						<!-- Me -->
 							<article id="me" class="panel">
 								<header>
-									<?php echo $content->h1('header1', 'Jane Doe'); ?>
-									<?php echo $content->span('header1-span', 'Senior Astral Projectionist', array('class' => 'byline')); ?>
+									<?php echo $html->h1('header1', 'Jane Doe'); ?>
+									<?php echo $html->span('header1-span', 'Senior Astral Projectionist', array('class' => 'byline')); ?>
 								</header>
 								<a href="#work" class="jumplink pic">
 									<span class="jumplink arrow fa fa-chevron-right"><span>See my work</span></span>

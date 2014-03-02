@@ -9,7 +9,9 @@ if (isset($_POST))
 	if ($mysqli->connect_errno) {
 	    $db_status = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 	} else {
+
 		include(installdir.'/sql/routes.php');
+		include(installdir.'/sql/contents.php');
 
 		$db_config = array(
 		    'driver'    => 'mysql',

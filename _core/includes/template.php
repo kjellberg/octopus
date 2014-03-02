@@ -59,7 +59,7 @@ class template extends Octopus
 		$footer = $this->footer();
 		extract($args, EXTR_OVERWRITE);
 
-		$content = $this->content();
+		$html = $this->get_html_object();
 
 		if(file_exists($template_file)) 
 		{
@@ -83,10 +83,10 @@ class template extends Octopus
 			$this->echo_and_die('404 - Sidan kan inte hittas: <br>' . $this->query());
 	}
 
-	function content()
+	function get_html_object()
 	{
 		global $octopus;
-		return $octopus->content;
+		return $octopus->html;
 	}
 }
 
