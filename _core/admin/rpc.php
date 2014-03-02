@@ -19,7 +19,7 @@ $loop_id = 0;
 // we get back actual HTML instead of new line characters
 // so we need to replace them with new lines for proper display
 // later on
-$content = trim(preg_replace('~(<br\s*/?>)~im', PHP_EOL, $content));
+$content = strip_tags(trim(preg_replace('~(<br\s*/?>)~im', PHP_EOL, $content)));
 
 
 // content is ready to be updated in the database
