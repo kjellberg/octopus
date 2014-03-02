@@ -5,10 +5,10 @@ define( 'octopus_version_name', 'dev');
 define( 'sitedir', customdir . '/default' );
 
 /* Run installation scripts */
-require_once('install/install.php');
+require_once( coredir . '/install/install.php');
 
 /* Include Composer autoload.php */
-require_once( 'vendor/autoload.php' );
+require_once( webdir . '/vendor/autoload.php' );
 
 /* Include our models */
 $models_dir = coredir . '/models';
@@ -25,4 +25,5 @@ foreach (glob("{$helpers_dir}/*.php") as $filename ) include_once $filename;
 require_once( coredir . '/admin/load.php');
 
 /* Include and render our views */
-require_once( coredir . '/view.php');
+if(!isset($OCTOPUS_NO_VIEW))
+	require_once( coredir . '/view.php');

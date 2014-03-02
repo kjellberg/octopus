@@ -7,11 +7,7 @@
 	<div id="full">
 		<div class="middle">
 			<?php 
-				echo $this->field( // Print out Hello World text and make it editable.
-					'helloWorld',  // Field ID.
-					'Hello World', // Output string.
-					'h1' // html tag (optional)
-				); 
+				echo $content->h1( 'front-page-message' );
 			?>
 		</div>
 	</div>

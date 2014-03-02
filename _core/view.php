@@ -22,7 +22,7 @@ $tools_dir = coredir . '/tools';
 foreach (glob("{$tools_dir}/*.php") as $filename ) include_once $filename;
 
 // Render view.
-$theme->render($theme->theme_file, array('title' => 'Min titel.'));
+$theme->render($theme->theme_file);
 
 // Add hook to trigger functions after output.
 $octopus->hook->trigger('after_render');

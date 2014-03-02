@@ -4,7 +4,7 @@ class template extends Octopus
 	var $css = array();
 
 	function __construct() {
-		$this->theme 			= 'global/themes/empty';
+		$this->theme 			= 'global/themes/html5up-astral';
 		$this->theme_path 		= $this->theme;
 		$this->theme_dir  		= customdir . '/' . $this->theme_path;
 		$this->theme_file 		= $this->theme_dir . '/' . $this->route()->theme_file;
@@ -59,6 +59,8 @@ class template extends Octopus
 		$footer = $this->footer();
 		extract($args, EXTR_OVERWRITE);
 
+		$content = $this->content();
+
 		if(file_exists($template_file)) 
 		{
 			// Compress and output
@@ -78,14 +80,13 @@ class template extends Octopus
 		if ($route = Route::where('query_uri', '=', $this->query())->first())
 			return $route;
 		else 
-			$this->echo_and_die('404 - Sidan kan inte hittas');
+			$this->echo_and_die('404 - Sidan kan inte hittas: <br>' . $this->query());
 	}
 
-	function field ( $field_name, $placeholder = 'Editable text', $tag = 'span', $args = array() ) 
+	function content()
 	{
 		global $octopus;
-		extract($args);
-		return "<{$tag} class='editable'>{$placeholder}</{$tag}>";
+		return $octopus->content;
 	}
 }
 
