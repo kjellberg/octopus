@@ -4,7 +4,7 @@ class template extends Octopus
 	var $css = array();
 
 	function __construct() {
-		$this->theme 			= 'global/themes/html5up-astral';
+		$this->theme 			= 'default/themes/seodesign';
 		$this->theme_path 		= $this->theme;
 		$this->theme_dir  		= customdir . '/' . $this->theme_path;
 		$this->theme_file 		= $this->theme_dir . '/' . $this->route()->theme_file;

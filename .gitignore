@@ -2,3 +2,5 @@
 .DS_Store
 composer.lock
 vendor/
+custom/default/*
+sftp-config.json
