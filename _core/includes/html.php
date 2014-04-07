@@ -13,8 +13,21 @@ class html
 		return "<{$tag} id='{$field_name}' class='editable {$class}'>{$placeholder}</{$tag}>";
 	}
 
+
+
+	public function loop( $loopName ) {
+		ob_start();
+	}
+
+
+	public function endloop() {
+		$loop = ob_get_clean();
+		$loop .= $loop . $loop;
+		echo $loop;
+	}
+
 	/* 
-		Every method below is a shortcut to the one above and they all look all the same
+		Every method below is a shortcut to tag and they will all look the same
 		except the function name. Doesn't need commentes. 
 	*/
 

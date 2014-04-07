@@ -30,6 +30,7 @@ if (!isset($c))
 
 	$c->nameId = $nameId;
 	$c->route_id = $route_id;
+	$c->loop_id = $loop_id;
 	$c->content = $content;
 
 	$c->save();

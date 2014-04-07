@@ -38,70 +38,24 @@
 
 						<!-- Work --> 
 							<article id="work" class="panel">
+								
 								<header>
 									<?php echo $html->h2('second-page-title', 'My Portfolio'); ?>
 								</header>
-								<p>
-									<?php echo $html->p('second-page-paragraph', 'Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit. 
-									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
-									luctus elit eget interdum.'); ?> 
-								</p>
+								
+								<?php echo $html->p('second-page-paragraph', 'Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit. 
+								Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
+								luctus elit eget interdum.'); ?> 
+						
 								<section class="is-gallery">
 									<div class="row half">
+										
+										<?php $html->loop('portfolio'); ?>
 										<div class="4u">
 											<a href="http://flypixel.com/knob/3495684098026313" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/1.jpg" alt=""></a>
 										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/contact-login-form/8829734266026310" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/2.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/wallpaper-pack/3755398966026313" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/3.jpg" alt=""></a>
-										</div>
-									</div>
-									<div class="row half">
-										<div class="4u">
-											<a href="http://flypixel.com/44-shades-of-free-icons/8268508056006318" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/4.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/flip-clock/3655053956026317" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/5.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/dropdown/5290304620795313" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/6.jpg" alt=""></a>
-										</div>
-									</div>
-									<div class="row half">
-										<div class="4u">
-											<a href="http://flypixel.com/pie-charts/1759361594616314" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/7.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/sliding-selector-bar/7042935581006315" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/8.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/dark-as-hell-ui/5418809286006313" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/9.jpg" alt=""></a>
-										</div>
-									</div>
-									<div class="row half">
-										<div class="4u">
-											<a href="http://flypixel.com/cityscape/9803996277226316" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/10.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/dropdown/8259263378026313" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/11.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/wood-ui-kit/3574765984616310" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/12.jpg" alt=""></a>
-										</div>
-									</div>
-									<div class="row half">
-										<div class="4u">
-											<a href="http://flypixel.com/upload-button/9737964647895311" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/13.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/collapsible-menunavigation/5743165610406316" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/14.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/3d-button/5506786525606318" class="image image-full"><img src="<?php echo $this->theme_url; ?>/images/15.jpg" alt=""></a>
-										</div>
-									</div>
+										<?php $html->endloop(); ?>
+									</div>	
 								</section>
 							</article>
 
