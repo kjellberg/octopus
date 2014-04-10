@@ -1,6 +1,7 @@
 {
     "require": {
         "monolog/monolog": "1.2.*",
-		"illuminate/database": "*"
+		"illuminate/database": "*",
+        "facebook/php-sdk": "dev-master"
     }
 }

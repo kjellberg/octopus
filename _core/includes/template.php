@@ -44,7 +44,7 @@ class template extends Octopus
 
 		switch ($ext) {
 			case 'css':
-				echo "<link rel='stylesheet' href='".$theme_url . '/css/' . $file."'>";
+				echo "<link rel='stylesheet' href='". $theme_url . '/css/' . $file."'>";
 			break;	
 
 			case 'js':

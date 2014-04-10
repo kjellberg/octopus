@@ -16,9 +16,6 @@ function load_admin_toolbar()
 	echo "var octopusAdminUrl = '{$admin_url}'";
 	echo "</script>";
 	echo "<script src='{$admin_url}/admin.js'></script>";
-	echo "<script src='{$admin_url}/failsafe.js'></script>";
-	echo "<link href='{$admin_url}/failsafe.css' rel='stylesheet' type='text/css'>";
-	echo "<script>$.failsafe({checkUrl:'{$admin_url}/failsafe.css',checkInterval:5000,chargeThreshold:80});</script>";
 	?>
 	<div id="octopus-admin-frame">
 	</div>
