@@ -5,6 +5,7 @@ function get_admin_url() {
 	global $octopus;
 	return $octopus->config('site')['site_url'] . str_replace(webdir . '/', '', coredir) . '/admin';
 }
+
 function load_admin_toolbar()
 {
 	$jquery = '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js';

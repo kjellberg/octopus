@@ -8,7 +8,7 @@ class template extends Octopus
 		$this->theme_path 		= $this->theme;
 		$this->theme_dir  		= customdir . '/' . $this->theme_path;
 		$this->theme_file 		= $this->theme_dir . '/' . $this->route()->theme_file;
-		$this->theme_url	  	= $this->config('site')['site_url'] . 'custom/' . $this->theme_path;
+		$this->theme_url	  	= str_replace(webdir . '/', $this->config('site')['site_url'], customdir) . '/' . $this->theme_path;
 	}
 
 	public function head() {
