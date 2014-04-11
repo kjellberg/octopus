@@ -36,6 +36,6 @@ ini_set('display_errors', '1');
 
 define( 'webdir', dirname(__FILE__) );
 define( 'coredir', __DIR__ . '/_core');
-define( 'customdir', webdir . '/custom');
+define( 'customdir', webdir . '/sites');
 
 include(coredir . '/init.php');
