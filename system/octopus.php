@@ -35,7 +35,7 @@ class Octopus
 
 		/* Load classes and create an object from all files in a specifed directory */
 		if (!is_dir($path))
-			return false; // Return false if the folder doesn't exists.
+			return $path . " not found"; // Return false if the folder doesn't exists.
 
 		foreach (glob("{$path}/*.php") as $filename )
 	    {

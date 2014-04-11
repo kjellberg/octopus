@@ -55,9 +55,9 @@ class template extends Octopus
 
 	public function render($template_file = '', $args = array()) {
 
-		$head = $this->head();
-		$footer = $this->footer();
 		extract($args, EXTR_OVERWRITE);
+
+		$this->auto_class_loader(sitedir . '/modules');
 
 		$html = $this->get_html_object();
 
@@ -73,6 +73,8 @@ class template extends Octopus
 			else
 				echo preg_replace( array( '/ {2,}/', '/<!--.*?-->|\t|(?:\r?\n[ \t]*)+/s' ), array( ' ', '' ), $output );
 		}
+
+
 	}
 
 	public function route()
