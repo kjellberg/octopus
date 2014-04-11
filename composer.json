@@ -1,4 +1,5 @@
 {
+	"name": "kjellberg/triples",
     "require": {
         "monolog/monolog": "1.2.*",
 		"illuminate/database": "*",
