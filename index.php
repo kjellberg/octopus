@@ -35,7 +35,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 define( 'webdir', dirname(__FILE__) );
-define( 'coredir', __DIR__ . '/_core');
+define( 'coredir', __DIR__ . '/system');
 define( 'customdir', webdir . '/sites');
 
 include(coredir . '/init.php');
