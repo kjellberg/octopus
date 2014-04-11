@@ -17,7 +17,7 @@
  *     Cras dolor nulla, tristique vel arcu a, porta condimentum tellus. 
  *     Pellentesque auctor dignissim diam.
  *  
- *     v 0.1 
+ *     v 0.dev 
  *  
  *     CREATED BY                 CREATED FOR
  *     Rasmus Kjellberg      	  You &
