@@ -18,13 +18,6 @@
  *     Pellentesque auctor dignissim diam.
  *  
  *     v 0.dev 
- *  
- *     CREATED BY                 CREATED FOR
- *     Rasmus Kjellberg      	  You &
- *     Tamara Stojcic         	  Everyone
- *   
- *     www.octopuscms.info
- *
  *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 */ 
