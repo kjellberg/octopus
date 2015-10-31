@@ -7,7 +7,7 @@
 
     <title>Octopus CMS - Installation</title>
   	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-  	<link rel="stylesheet" href="_core/install/install.css">
+  	<link rel="stylesheet" href="system/install/install.css">
    	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
